@@ -9,6 +9,17 @@ use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+//    public function __construct()
+//    {
+//        $this->middleware('cart');
+//    }
+
+
     public function addCart(Request $request,$product_id){
         $check = Cart::where('product_id',$product_id)->where('user_ip',request()->ip())->first();
         if ($check){

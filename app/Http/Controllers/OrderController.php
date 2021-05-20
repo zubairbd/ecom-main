@@ -21,8 +21,9 @@ class OrderController extends Controller
             'shipping_phone' => 'required',
             'shipping_email' => 'required',
             'address' => 'required',
-//            'state' => 'required',
+               'state' => 'required',
             'post_code' => 'required',
+            'payment_type' => 'required',
         ]);
         $order_id = Order::insertGetId([
             'user_id'=> Auth::id(),
@@ -64,6 +65,6 @@ class OrderController extends Controller
     }
 
     public function orderSuccess(){
-        return view('pages.order-complete');
+        return view('fontend.order-complete');
     }
 }

@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/user/my-account', [App\Http\Controllers\HomeController::class, 'index'])->name('myaccount');
 
 Route::get('/', [App\Http\Controllers\FontendController::class, 'index']);
 

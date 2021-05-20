@@ -45,7 +45,7 @@
                         <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
                         <li><a href="#"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
                         @auth
-                            <li><a href="{{url('home')}}"><i class="icon fa fa-user"></i>My Account</a></li>
+                            <li><a href="{{route('myaccount')}}"><i class="icon fa fa-user"></i>My Account</a></li>
                             <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i class="icon fa fa-user"></i>Logout</a></li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
